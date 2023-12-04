@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="ssh://git@www.rockchip.com.cn/linux/" name="rk"/>
-  
+  <remote fetch="https://github.com/leege0610/manifests.git" name="origin"/>
+  <default remote="origin" sync-j="4" revision="main"/>
+
+  <project name="device" path="device">
+    <linkfile dest="mkfirmware.sh" src="rockchip/common/mkfirmware.sh"/>
+    <linkfile dest="build.sh" src="rockchip/common/build.sh"/>
+    <linkfile dest="rkflash.sh" src="rockchip/common/rkflash.sh"/>
+    <linkfile dest="prebuilts/gcc/linux-x86/arm/Cross-compile-tools-readme.txt" src="rockchip/rv1126_rv1109/Cross-compile-tools-readme.txt"/>
+  </project>
 </manifest>
